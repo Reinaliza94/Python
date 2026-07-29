@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Escritora</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#4A3428,#6B4F3B,#A07855);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+    height:620px;
+    background:#F6F1EB;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.left{
+    flex:1;
+    background:linear-gradient(rgba(72,48,32,.75),rgba(72,48,32,.75)),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80") center/cover;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:60px;
+}
+
+.left h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:54px;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:17px;
+    line-height:1.8;
+    opacity:.95;
+}
+
+.right{
+    width:420px;
+    background:#EFE4D8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:45px;
+}
+
+.login-box{
+    width:100%;
+}
+
+.login-box h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    color:#5A3E2B;
+    margin-bottom:8px;
+}
+
+.login-box span{
+    color:#8A6D55;
+    font-size:15px;
+}
+
+.form-group{
+    margin-top:25px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#5A3E2B;
+    font-weight:500;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    border:2px solid #D8C1AB;
+    outline:none;
+    transition:.3s;
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#8B5E3C;
+}
+
+.options{
+    margin-top:15px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+.options a{
+    text-decoration:none;
+    color:#8B5E3C;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#6B4423;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#4F3118;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    font-size:14px;
+    color:#7A6555;
+}
+
+.footer a{
+    color:#6B4423;
+    text-decoration:none;
+    font-weight:500;
+}
+
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+    height:auto;
+    margin:20px;
+}
+
+.left{
+    min-height:280px;
+}
+
+.right{
+    width:100%;
+}
+
+}
+</style>
+
+</head>
+<body>
+fsddfgsdfg
+<div class="container">
+
+    <div class="left">
+        <h1>Entre em sua história</h1>
+        <p>
+            Cada livro nasce de uma emoção, cada palavra
+            guarda um universo. Acesse sua conta e continue
+            explorando um espaço onde a literatura ganha vida.
+        </p>
+    </div>
+
+    <div class="right">
+
+        <div class="login-box">
+
+            <h2>Login</h2>
+            <span>Bem-vindo(a) de volta.</span>
+
+            <form>
+
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="Digite sua senha">
+                </div>
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox">
+                        Lembrar-me
+                    </label>
+
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+
+                <button>Entrar</button>
+
+            </form>
+
+            <div class="footer">
+                Ainda não possui conta?
+                <a href="#">Cadastre-se</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
