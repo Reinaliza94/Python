@@ -5,17 +5,12 @@ app = Flask(__name__)
 
 # Definição de uma rota
 @app.route('/')
-def ola_mundo():
+def tela_login():
  return render_template('login.html')
 
-@app.route('/cadastro')
-def cadastro_cliente():
- return 'Cadastro de Clientes'
-
-@app.route('/tela_principal')
-def tela_principal():
- nomeTeste = 'Izabel'
- return render_template('tela_principal.html', nome=nomeTeste)
+@app.route('/home')
+def home():
+ return render_template('home.html')
 
 #Inicia o servidor de desenvolvimento.
 if __name__ == '__main__':

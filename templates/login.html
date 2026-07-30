@@ -1,228 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | Escritora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Login</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Ícones -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#4A3428,#6B4F3B,#A07855);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+        body{
+            background: linear-gradient(135deg,#dff5e1,#ccefd5,#b9e6c2);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
 
-.container{
-    width:100%;
-    max-width:1050px;
-    height:620px;
-    background:#F6F1EB;
-    border-radius:20px;
-    overflow:hidden;
-    display:flex;
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-}
+        .login{
+            width:380px;
+            background:#ffffff;
+            border-radius:18px;
+            padding:35px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+            text-align:center;
+        }
 
-.left{
-    flex:1;
-    background:linear-gradient(rgba(72,48,32,.75),rgba(72,48,32,.75)),
-    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80") center/cover;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:60px;
-}
+        .icone{
+            width:90px;
+            height:90px;
+            background:#d8f2dc;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:0 auto 20px;
+            color:#3b8d5b;
+            font-size:42px;
+        }
 
-.left h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:54px;
-    margin-bottom:20px;
-}
+        h1{
+            color:#2f6f49;
+            margin-bottom:8px;
+            font-size:28px;
+        }
 
-.left p{
-    font-size:17px;
-    line-height:1.8;
-    opacity:.95;
-}
+        p{
+            color:#5f7f69;
+            margin-bottom:25px;
+            font-size:15px;
+        }
 
-.right{
-    width:420px;
-    background:#EFE4D8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:45px;
-}
+        .campo{
+            text-align:left;
+            margin-bottom:18px;
+        }
 
-.login-box{
-    width:100%;
-}
+        .campo label{
+            display:block;
+            margin-bottom:6px;
+            color:#466c54;
+            font-weight:bold;
+        }
 
-.login-box h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:42px;
-    color:#5A3E2B;
-    margin-bottom:8px;
-}
+        .campo input{
+            width:100%;
+            padding:12px;
+            border:1px solid #b8d8c2;
+            border-radius:8px;
+            background:#f5fcf6;
+            font-size:15px;
+            outline:none;
+            transition:.3s;
+        }
 
-.login-box span{
-    color:#8A6D55;
-    font-size:15px;
-}
+        .campo input:focus{
+            border-color:#5ba56f;
+            box-shadow:0 0 6px rgba(91,165,111,.3);
+        }
 
-.form-group{
-    margin-top:25px;
-}
+        button{
+            width:100%;
+            padding:13px;
+            border:none;
+            border-radius:8px;
+            background:#6fbf7f;
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:.3s;
+        }
 
-label{
-    display:block;
-    margin-bottom:8px;
-    color:#5A3E2B;
-    font-weight:500;
-}
+        button:hover{
+            background:#4fa567;
+        }
 
-input{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#fff;
-    border:2px solid #D8C1AB;
-    outline:none;
-    transition:.3s;
-    font-size:15px;
-}
-
-input:focus{
-    border-color:#8B5E3C;
-}
-
-.options{
-    margin-top:15px;
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-}
-
-.options a{
-    text-decoration:none;
-    color:#8B5E3C;
-}
-
-button{
-    width:100%;
-    margin-top:30px;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    background:#6B4423;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    background:#4F3118;
-}
-
-.footer{
-    text-align:center;
-    margin-top:25px;
-    font-size:14px;
-    color:#7A6555;
-}
-
-.footer a{
-    color:#6B4423;
-    text-decoration:none;
-    font-weight:500;
-}
-
-@media(max-width:900px){
-
-.container{
-    flex-direction:column;
-    height:auto;
-    margin:20px;
-}
-
-.left{
-    min-height:280px;
-}
-
-.right{
-    width:100%;
-}
-
-}
-</style>
-
+        footer{
+            margin-top:25px;
+            color:#7c8d81;
+            font-size:13px;
+        }
+    </style>
 </head>
-<body>
-<div class="container">
 
-    <div class="left">
-        <h1>Entre em sua história</h1>
-        <p>
-            Cada livro nasce de uma emoção, cada palavra
-            guarda um universo. Acesse sua conta e continue
-            explorando um espaço onde a literatura ganha vida.
-        </p>
+<body>
+
+<div class="login">
+
+    <div class="icone">
+        <i class="fa-solid fa-headset"></i>
     </div>
 
-    <div class="right">
+    <h1>Help Desk</h1>
 
-        <div class="login-box">
+    <p>Sistema de Gestão de Chamados Técnicos</p>
 
-            <h2>Login</h2>
-            <span>Bem-vindo(a) de volta.</span>
+    <form>
 
-            <form>
-
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="Digite seu e-mail">
-                </div>
-
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" placeholder="Digite sua senha">
-                </div>
-
-                <div class="options">
-                    <label>
-                        <input type="checkbox">
-                        Lembrar-me
-                    </label>
-
-                    <a href="#">Esqueci minha senha</a>
-                </div>
-
-                <button>Entrar</button>
-
-            </form>
-
-            <div class="footer">
-                Ainda não possui conta?
-                <a href="#">Cadastre-se</a>
-            </div>
-
+        <div class="campo">
+            <label>Login</label>
+            <input type="text" placeholder="Digite seu usuário" required>
         </div>
 
-    </div>
+        <div class="campo">
+            <label>Senha</label>
+            <input type="password" placeholder="Digite sua senha" required>
+        </div>
+
+        <button type="submit">
+            Entrar
+        </button>
+
+    </form>
+
+    <footer>
+        © 2026 - Desenvolvido por Izabel Reinaldo
+    </footer>
 
 </div>
 
