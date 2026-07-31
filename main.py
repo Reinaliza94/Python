@@ -12,6 +12,10 @@ def tela_login():
 def home():
  return render_template('home.html')
 
+@app.route('/menu')
+def menu():
+ return render_template('menu.html')    
+
 #Inicia o servidor de desenvolvimento.
 if __name__ == '__main__':
  app.run(debug=True)

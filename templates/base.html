@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/menu.css') }}">
+
+    {% block css %}{% endblock %}
+
+    <title>{% block titulo %}Help Desk{% endblock %}</title>
+</head>
+
+<body>
+
+    {% include 'menu.html' %}
+
+    <main>
+        {% block conteudo %}{% endblock %}
+    </main>
+
+</body>
+</html>
