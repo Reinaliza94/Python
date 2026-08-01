@@ -1,26 +1,69 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#edf9ef;
-}
+/* Cabeçalho */
 
 header{
-    background:#6fbf7f;
-    color:white;
+    background:#b8e6c1;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 30px;
+    padding:15px 40px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
+
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:bold;
+    color:#2f5d50;
+}
+
+.logo i{
+    font-size:28px;
+}
+
+
+/* Menu horizontal */
 
 nav{
     display:flex;
+    align-items:center;
     gap:15px;
 }
 
-/* restante do CSS... */
+
+nav a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#2f5d50;
+    font-weight:bold;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+nav a:hover{
+    background:#96d5a4;
+    color:white;
+}
+
+
+/* Botão Sair */
+
+.btn-sair{
+    background:#7dbb88;
+    color:white;
+}
+
+
+.btn-sair:hover{
+    background:#5d9f69;
+}

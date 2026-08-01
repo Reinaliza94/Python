@@ -1,11 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, render_template_string, request, redirect, url_for, session
 
 # Criação de uma instância do Flask
 app = Flask(__name__)
 
 # Definição de uma rota
 @app.route('/')
-def tela_login():
+def login():
  return render_template('login.html')
 
 @app.route('/home')

@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS principal -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 
+
+    <!-- CSS do menu -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/menu.css') }}">
 
+
+    <!-- CSS específico de cada página -->
     {% block css %}{% endblock %}
 
-    <title>{% block titulo %}Help Desk{% endblock %}</title>
+
+    <title>
+        {% block titulo %}Help Desk{% endblock %}
+    </title>
+
 </head>
+
 
 <body>
 
+
+    <!-- Menu aparece em todas as páginas -->
     {% include 'menu.html' %}
 
+
+    <!-- Conteúdo das páginas -->
     <main>
+
         {% block conteudo %}{% endblock %}
+
     </main>
 
+
 </body>
+
 </html>
